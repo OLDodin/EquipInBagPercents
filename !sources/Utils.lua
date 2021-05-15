@@ -496,7 +496,7 @@ end
 --------------------------------------------------------------------------------
 -- Locales functions
 --------------------------------------------------------------------------------
-
+function getLocale() end
 local locale=getLocale()
 
 function setLocaleText(widget, checked)
