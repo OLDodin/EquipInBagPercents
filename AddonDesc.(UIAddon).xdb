@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIAddon>
+	<AutoStart>true</AutoStart>
+	<Forms>
+		<Item>
+			<Id>Main</Id>
+			<Form href="Widgets/Form.xdb#xpointer(/WidgetForm)"/>
+		</Item>
+		<Item>
+			<Id>Template</Id>
+			<Form href="Widgets/Templates/Main.xdb#xpointer(/WidgetForm)"/>
+		</Item>
+		<Item>
+			<Id>Form</Id>
+			<Form href="Widgets/Templates/Form.xdb#xpointer(/WidgetForm)"/>
+		</Item>
+	</Forms>
+	<MainFormId>Main</MainFormId>
+	<Name>EquipInBagPercents</Name>
+	<localizedNameFileRef href="name.txt"/>
+	<localizedDescFileRef href="desc.txt"/>
+	<ScriptFileRefs>
+		<Item href="/Mods/SampleCommon/SampleAddonBase.lua"/>
+		<Item href="LibDnD.lua"/>
+		<Item href="Utils.lua"/>
+		<Item href="EquipPercents.lua"/>
+		
+	</ScriptFileRefs>
+	<texts href="RelatedTexts.(UIRelatedTexts).xdb#xpointer(/UIRelatedTexts)" />
+  <textures href="Widgets/Textures/Textures.xdb#xpointer(/UIRelatedTextures)"/>
+  <visObjects href=""/>
+ 
+<addon_name>EquipInBagPercents</addon_name>
+</UIAddon>
