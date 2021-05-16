@@ -5,7 +5,7 @@ function ShowPercent()
 	HidePercent()
 
 	local bagWdg = stateMainForm:GetChildChecked("ContextBag", false):GetChildChecked("Bag", false)
-	if bagWdg:GetChildChecked("Tabs", false):GetChildChecked("Tab01", false):GetVariant() ~= 1 then
+	if not bagWdg:IsVisibleEx() or bagWdg:GetChildChecked("Tabs", false):GetChildChecked("Tab01", false):GetVariant() ~= 1 then
 		return
 	end
 	
