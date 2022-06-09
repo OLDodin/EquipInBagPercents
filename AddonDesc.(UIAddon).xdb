@@ -26,8 +26,6 @@
 		<Item href="EquipPercents.lua"/>
 		
 	</ScriptFileRefs>
-	<texts href="RelatedTexts.(UIRelatedTexts).xdb#xpointer(/UIRelatedTexts)" />
-  <textures href="Widgets/Textures/Textures.xdb#xpointer(/UIRelatedTextures)"/>
   <visObjects href=""/>
  
 <addon_name>EquipInBagPercents</addon_name>
