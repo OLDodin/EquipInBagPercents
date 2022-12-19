@@ -125,9 +125,6 @@ function Update()
 end
 
 function Init()
-	local m_template = createWidget(nil, "Template", "Template")
-	setTemplateWidget(m_template)
-
 	common.RegisterEventHandler(OnChangeInventorySlot, "EVENT_INVENTORY_SLOT_CHANGED")
 	common.RegisterEventHandler(OnEventContainerItemRemoved, "EVENT_CONTAINER_ITEM_REMOVED")
 	common.RegisterEventHandler(OnChangeInventorySlotOverflow, "EVENT_INVENTORY_OVERFLOW_SLOT_ADDED")
