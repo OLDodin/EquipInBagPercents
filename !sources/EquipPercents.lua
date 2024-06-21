@@ -9,7 +9,8 @@ local function CreatePercentTxtWdg(anItemID, aCnt, aBagWdg, aWdgName1, aWdgName2
 		if itemBudgets then
 			local equipPercent = itemBudgets[ENUM_FloatingBudgetType_OffenceBudget]
 			local parentWdg = aBagWdg:GetChildChecked(aWdgName1, false):GetChildChecked(aWdgName2 .. toString(common.FormatInt(math.floor(aCnt/6) + 1, "%02d")), false):GetChildChecked("Item0" .. aCnt % 6 + 1, false)
-			local percentTxtWdg = createWidget(parentWdg, "percentTxt", "TextView", WIDGET_ALIGN_LOW, WIDGET_ALIGN_LOW, 40, 20, 5, 0)
+			local percentTxtWdg = createWidget(mainForm, "percentTxt", "TextView", WIDGET_ALIGN_LOW, WIDGET_ALIGN_LOW, 40, 20, 5, 0)
+			parentWdg:AddChild(percentTxtWdg)
 			setText(percentTxtWdg, tostring(equipPercent).."%", "ColorWhite", 16)
 			return percentTxtWdg
 		end
