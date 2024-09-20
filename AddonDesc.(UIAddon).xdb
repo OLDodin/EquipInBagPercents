@@ -6,10 +6,8 @@
 	<localizedNameFileRef href="name.txt"/>
 	<localizedDescFileRef href="desc.txt"/>
 	<ScriptFileRefs>
-		<Item href="/Mods/SampleCommon/SampleAddonBase.lua"/>
-		<Item href="LibDnD.lua"/>
-		<Item href="Utils.lua"/>
-		<Item href="EquipPercents.lua"/>
+		<Item href="Scripts\Utils.lua"/>
+		<Item href="Scripts\EquipPercents.lua"/>
 		
 	</ScriptFileRefs>
   <visObjects href=""/>
