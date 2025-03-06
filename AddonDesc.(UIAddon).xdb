@@ -10,6 +10,12 @@
 		<Item href="Scripts\EquipPercents.lua"/>
 		
 	</ScriptFileRefs>
+	<widgetGroups>
+		<Item>
+			<groupName>common</groupName>
+			<widgets href="Widgets/Resources/common/WidgetTemplates.xdb" />
+		</Item>
+	</widgetGroups>
   <visObjects href=""/>
  
 <addon_name>EquipInBagPercents</addon_name>

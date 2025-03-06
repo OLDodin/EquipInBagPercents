@@ -3,6 +3,8 @@ local m_createdOverflowTxtWdg = {}
 local m_wasShowed = false
 local m_wasOverflowShowed = false
 
+setTemplateWidget("common")
+
 local function CreatePercentTxtWdg(anItemID, aCnt, aBagWdg, aWdgName1, aWdgName2)
 	if anItemID then
 		local itemBudgets = itemLib.GetBudgets(anItemID)
