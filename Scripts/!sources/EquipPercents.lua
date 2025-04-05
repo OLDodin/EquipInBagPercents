@@ -28,8 +28,9 @@ function ShowPercent()
 		return
 	end
 	
+	local bagItems = containerLib.GetItems(ITEM_CONT_INVENTORY)
 	for i = 0, avatar.InventoryGetBaseBagSlotCount() - 1 do
-		local itemID = avatar.GetInventoryItemId(i)
+		local itemID = bagItems[i]
 		local percentTxtWdg = CreatePercentTxtWdg(itemID, i, bagWdg, "Area", "SlotLine")
 		if percentTxtWdg then
 			m_createdTxtWdg[i] = percentTxtWdg
@@ -54,8 +55,9 @@ function ShowOverflowPercent()
 		return
 	end
 	
-	local bagOverflowIDs = avatar.GetInventoryOverflowItemIds()
-	local overflowSize = math.min(avatar.GetInventoryOverflowSize(), 12)
+	
+	local bagOverflowIDs = containerLib.GetItems(ITEM_CONT_INVENTORY_OVERFLOW)
+	local overflowSize = math.min(containerLib.GetSize(ITEM_CONT_INVENTORY_OVERFLOW), 12)
 	for i = 0, overflowSize - 1 do
 		local itemID = bagOverflowIDs[i]
 		local percentTxtWdg = CreatePercentTxtWdg(itemID, i, bagWdg, "Overflow", "OverflowLine")
