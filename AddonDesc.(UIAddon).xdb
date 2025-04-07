@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UIAddon>
-	<AutoStart>true</AutoStart>
-	<Form href="Widgets/Form.xdb#xpointer(/WidgetForm)"/>
 	<Name>EquipInBagPercents</Name>
-	<localizedNameFileRef href="name.txt"/>
-	<localizedDescFileRef href="desc.txt"/>
+	<AutoStart>true</AutoStart>
+	<userAddonInfo>
+		<name href="name.txt" />
+		<description href="desc.txt" />
+		<license href="LICENSE" />
+		<sourceLink href="" />
+		<supportLink href="" />
+		<author>OLDodin</author>
+		<version></version>
+		<apiVersion>-1</apiVersion>
+		<buildTime>0</buildTime>
+		<useCommonScripts>false</useCommonScripts>
+	</userAddonInfo>
 	<ScriptFileRefs>
+		<Item href="Scripts\AddonBase.lua"/>
 		<Item href="Scripts\Utils.lua"/>
 		<Item href="Scripts\EquipPercents.lua"/>
-		
 	</ScriptFileRefs>
+	<Form href="Widgets/Form.xdb#xpointer(/WidgetForm)"/>
 	<widgetGroups>
 		<Item>
 			<groupName>common</groupName>
 			<widgets href="Widgets/Resources/common/WidgetTemplates.xdb" />
 		</Item>
 	</widgetGroups>
-  <visObjects href=""/>
- 
-<addon_name>EquipInBagPercents</addon_name>
 </UIAddon>
