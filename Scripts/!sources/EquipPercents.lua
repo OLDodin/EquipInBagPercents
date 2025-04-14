@@ -149,31 +149,37 @@ function OnEventContainerItemRemoved(aParam)
 end
 
 function Update()
-	local bagWdg = common.GetAddonMainForm("ContextBag"):GetChildChecked("Bag", false)
-	
-	if CheckBagCondition(bagWdg) then
-		if not m_wasShowed[ITEM_CONT_INVENTORY] then
-			ShowPercent(ITEM_CONT_INVENTORY)
+	local bagForm = common.GetAddonMainForm("ContextBag")
+	if bagForm then
+		local bagWdg = bagForm:GetChildChecked("Bag", false)
+		
+		if CheckBagCondition(bagWdg) then
+			if not m_wasShowed[ITEM_CONT_INVENTORY] then
+				ShowPercent(ITEM_CONT_INVENTORY)
+			end
+		else
+			HidePercent(ITEM_CONT_INVENTORY)
 		end
-	else
-		HidePercent(ITEM_CONT_INVENTORY)
+		
+		if CheckOverflowCondition(bagWdg) then
+			if not m_wasShowed[ITEM_CONT_INVENTORY_OVERFLOW] then
+				ShowPercent(ITEM_CONT_INVENTORY_OVERFLOW)
+			end
+		else
+			HidePercent(ITEM_CONT_INVENTORY_OVERFLOW)
+		end
 	end
 	
-	if CheckOverflowCondition(bagWdg) then
-		if not m_wasShowed[ITEM_CONT_INVENTORY_OVERFLOW] then
-			ShowPercent(ITEM_CONT_INVENTORY_OVERFLOW)
+	local depositeBoxForm = common.GetAddonMainForm("ContextDepositeBox")
+	if depositeBoxForm then
+		local depositeWdg = depositeBoxForm:GetChildChecked("MainPanel", false)
+		if CheckDepositeCondition(depositeWdg) then
+			if not m_wasShowed[ITEM_CONT_DEPOSITE] then
+				ShowPercent(ITEM_CONT_DEPOSITE)
+			end
+		else
+			HidePercent(ITEM_CONT_DEPOSITE)
 		end
-	else
-		HidePercent(ITEM_CONT_INVENTORY_OVERFLOW)
-	end
-	
-	local depositeWdg = common.GetAddonMainForm("ContextDepositeBox"):GetChildChecked("MainPanel", false)
-	if CheckDepositeCondition(depositeWdg) then
-		if not m_wasShowed[ITEM_CONT_DEPOSITE] then
-			ShowPercent(ITEM_CONT_DEPOSITE)
-		end
-	else
-		HidePercent(ITEM_CONT_DEPOSITE)
 	end
 end
 
